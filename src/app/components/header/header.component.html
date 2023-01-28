@@ -1,0 +1,37 @@
+<header>
+    <div class="header_container">
+        <div class="logo" [routerLink]="['/landing']">
+            <app-logo></app-logo>
+            <!-- <img src="/assets/securisk_logo.png" alt=""> -->
+        </div>
+        <div class="nav_container" [style.flex]="isMenuOpened ? '1' : 'none'">
+            <ul class="navs mobile_none" *ngIf="isMenuOpened">
+                <!-- <li style="--i:1" class="active">Home</li> -->
+                <li style="--i:1" [routerLink]="['/about-us']" routerLinkActive="active">About Us</li>
+                <li style="--i:2" [routerLink]="['/leadership-team']" routerLinkActive="active">Leadership Team</li>
+                <li style="--i:2" [routerLink]="['/sectors']" routerLinkActive="active">Sectors</li>
+                <!-- <li style="--i:2">Sectors</li> -->
+                <li style="--i:3" [routerLink]="['/products']" routerLinkActive="active">Products</li>
+                <li style="--i:4" [routerLink]="['/services']" routerLinkActive="active">Services</li>
+                <li style="--i:5" (click)="goToContact()">Contact</li>
+            </ul>
+            <div class="menu">
+                <i [ngClass]="isMenuOpened ? 'fa fa-times' : 'fa fa-bars'" (click)="isMenuOpened = !isMenuOpened"></i>
+            </div>
+        </div>
+    </div>
+    <div class="mobile_menu_container desktop_none">
+        <div class="nav_container" [style.flex]="isMenuOpened ? '1' : 'none'">
+            <ul class="navs" *ngIf="isMenuOpened">
+                <!-- <li style="--i:1" class="active">Home</li> -->
+                <li style="--i:1" [routerLink]="['/about-us']" routerLinkActive="active">About Us</li>
+                <li style="--i:2" [routerLink]="['/leadership-team']" routerLinkActive="active">Leadership Team</li>
+                <li style="--i:2" [routerLink]="['/sectors']" routerLinkActive="active">Sectors</li>
+                <!-- <li style="--i:2">Sectors</li> -->
+                <li style="--i:3" [routerLink]="['/products']" routerLinkActive="active">Products</li>
+                <li style="--i:4" [routerLink]="['/services']" routerLinkActive="active">Services</li>
+                <li style="--i:5" (click)="goToContact()">Contact</li>
+            </ul>
+        </div>
+    </div>
+</header>

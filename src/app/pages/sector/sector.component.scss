@@ -1,0 +1,140 @@
+section {
+    .banner {
+        background-color: #eeeeee;
+        // background-image: var(--banner);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        height: 100vh;
+        max-height: 380px;
+        margin-bottom: 20px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .sector_container {
+        width: 92%;
+        margin: auto;
+        display: flex;
+        padding: 25px 0 30px;
+        .sector {
+            width: 75%;
+            padding-right: 40px;
+            .sector_details {
+                h5 {
+                    color: var(--primary-color);
+                    font-size: 32px;
+                    font-weight: 500;
+                    padding: 0 0 2%;
+                    text-transform: capitalize;
+                    line-height: 1.1;
+                }
+                p {
+                    font-size: 15px;
+                    color: #777777;
+                    font-weight: 400;
+                    line-height: 26px;
+                    padding: 0px 0px 15px;
+                    text-align: justify;
+                }
+            }
+            .key_products {
+                h6 {
+                    font-size: 18px;
+                    color: #777777;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    padding-top: 1%;
+                    padding-bottom: 15px;
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    // background: url('https://firebasestorage.googleapis.com/v0/b/juteproducts.appspot.com/o/securisk%2Fsectors%2Fconstruction-bg.png?alt=media&token=662ec3b7-d525-4061-a980-b06d2b3f5acf') no-repeat bottom;
+                    li {
+                        display: block;
+                        border-bottom: 1px dashed #243a6f;
+                        font-size: 15px;
+                        color: #243a6f;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        padding: 10px 0px;
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        cursor: pointer;
+                        img {
+                            max-width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .sectors_list {
+            width: 25%;
+            h5 {
+                width: 100%;
+                color: var(--primary-color);
+                font-size: 22px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-left: 2px;
+                padding-bottom: 10px;
+                display: inline-block;
+                margin-bottom: 15px;
+                border-bottom: 3px solid var(--primary-color);
+            }
+            ul {
+                list-style: none;
+                list-style-image: url('https://firebasestorage.googleapis.com/v0/b/juteproducts.appspot.com/o/securisk%2Fsectors%2Farrow.png?alt=media&token=4253cc25-9cfa-482a-95ae-f884a8c719e5');
+                list-style-position: inside;
+                li {
+                    padding: 10px 0px;
+                    border-bottom: 1px solid #a0a0a0;
+                    transition: all 300ms ease 0s;
+                    &:hover, &.active {
+                        a {
+                            color: var(--secondary-color);
+                        }
+                    }
+                    a {
+                        font-size: 15px;
+                        color: #777777;
+                        font-weight: 400;
+                        line-height: 26px;
+                        text-align: left;
+                        text-decoration: none;
+                        transition: all 300ms ease 0s;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        .sector_container {
+            flex-direction: column;
+            .sector {
+                width: 100%;
+                padding-right: 0;
+                padding-bottom: 30px;
+            }
+            .sectors_list {
+                width: 100%;
+            }
+        }
+    }
+}

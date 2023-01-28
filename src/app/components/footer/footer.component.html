@@ -1,0 +1,94 @@
+<footer>
+    <div class="logo" [routerLink]="['/landing']">
+        <app-logo></app-logo>
+    </div>
+    <div class="top_container" [style.--span]="addresses.length + 1">
+        <div *ngFor="let item of addresses" class="address">
+            <h4>{{item.address_type}} Office</h4>
+            <p>{{item.address}}</p>
+            <p>
+                TEL: 
+                <a href="tel:{{item.mobile}}">{{item.mobile}}</a>
+            </p>
+            <ul class="add_links">
+                <li><a href="https://wa.me/{{item.whatsappNumber}}" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="{{item.maps_link}}"><i class="fas fa-map-marked-alt"></i></a></li>
+                <li><a href="mailto:{{item.email}}"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <!-- <div class="address">
+            <h4>Corporate Office</h4>
+            <p># B – 406, 4th Floor, Mahavir Icon,<br>
+                Plot #  89 – 90, Sector 15, CBD <br>
+                Belapur, Navi Mumbai – 4000614
+            </p>
+            <p>
+                TEL: 
+                <a href="tel:022-49707155">022-49707155</a>
+            </p>
+            <ul class="add_links">
+                <li><a href="https://wa.me/7498443677" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.google.com/maps/place/7JFM226Q%2B67/@19.0105625,73.0381875,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd83675ec14870f85!8m2!3d19.0105625!4d73.0381875" target="_blank"><i class="fas fa-map-marked-alt"></i></a></li>
+                <li><a href="mailto:operation@securisk.in"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="comp_details">
+            <h4>Branch Office</h4>
+            <p>Shop 3B, Commercial Street, <br>
+                Lanco Hills, Manikonda Jagir, <br>
+                Hyderabad - 500089, Telangana.
+            </p>
+            <p>
+                TEL: 
+                <a href="tel:+91 9985303565 ">+91 9985303565 </a>
+            </p>
+            <ul class="add_links">
+                <li><a href="https://wa.me/9985303565" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.google.com/maps/place/7J9WC96G%2BF3/@17.4111875,78.3751875,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x4da196bed8024b9a!8m2!3d17.4111875!4d78.3751875" target="_blank"><i class="fas fa-map-marked-alt"></i></a></li>
+                <li><a href="mailto:abhijit@securisk.in"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div> -->
+        <!-- <div class="products">
+            <h4>Sitemap</h4>
+            <ul class="prod_list">
+                <li><a [routerLink]="['/about-us']" routerLinkActive="active">About Us</a></li>
+                <li><a [routerLink]="['/leadership-team']" routerLinkActive="active">Leadership Team</a></li>
+                <li><a [routerLink]="['/sectors']" routerLinkActive="active">Sectors</a></li>
+                <li><a [routerLink]="['/products']" routerLinkActive="active">Products</a></li>
+                <li><a [routerLink]="['/services']" routerLinkActive="active">Services</a></li>
+            </ul>
+        </div> -->
+        <div class="chat_container">
+            <h4>Let's Chat</h4>
+            <form autocomplete="off">
+                <div>
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div>
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Phone">
+                </div>
+                <div>
+                    <textarea id="" rows="5" placeholder="Type here..."></textarea>
+                </div>
+                <button>OK</button>
+            </form>
+        </div>
+    </div>
+    <div class="bottom_container">
+        <div class="quick_links">
+            <a href="">Terms & Conditions</a> | <a href="">Disclaimer</a> | <a href="">Privacy & Security</a> | <a href="">Website Disclosure</a> | <a href="">Cookies</a> | <a href="">Customer Grievance Redressal</a> | <a href="">Code of Conduct</a>
+        </div>
+        <div class="btm_flex">
+            <div class="copyright" [innerHTML]="footerData.data"></div>
+            <div class="media">
+                <ul>
+                    <li><a [href]="footerData.facebookLink"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a [href]="footerData.twitterLink"><i class="fab fa-twitter"></i></a></li>
+                    <li><a [href]="footerData.youtubeLink"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,21 @@
+<div class="profile_container">
+    <div class="close_container" mat-dialog-close>
+        <i class="fa fa-times"></i>
+    </div>
+    <div class="image_container">
+        <div class="img_container">
+            <img [src]="data.image?.fileUrl" alt="">
+        </div>
+        <div class="follow_container">
+            <i class="fab fa-twitter"></i>
+            Follow on twitter
+        </div>
+    </div>
+    <div class="profile_details">
+        <h5>{{data.name}}</h5>
+        <h6>{{data.designation}}</h6>
+        <div class="description">
+            {{data.description}}
+        </div>
+    </div>
+</div>
